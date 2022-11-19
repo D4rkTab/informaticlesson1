@@ -16,8 +16,8 @@ app.post('/users', (req,res) => {
     console.log(req.body.login, req.body.password, req.body.email)
     res.end(controller.createUser(req.body.login, req.body.password, req.body.email))
 });
-app.put('/users', (req,res) =>{
-
+app.put('/users/:id', (req,res) =>{
+    res.end(controller.changeUser(req.id))
 });
 app.delete('/users', (req,res) => {
 
